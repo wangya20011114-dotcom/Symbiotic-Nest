@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Symbiotic Nest",
+  "description": "A therapeutic companion app for the Symbiotic Nest device, featuring focus rituals, mood tracking, and bio-inspired breathing exercises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

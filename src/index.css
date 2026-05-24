@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Nunito", sans-serif;
+  
+  --color-lavender-bg: #F0F9FF;
+  --color-pastel-blue-primary: #BAE6FD;
+  --color-pastel-peach: #FDBA74;
+  --color-pastel-mint: #A7F3D0;
+  --color-pastel-blue-soft: #E0F2FE;
+  --color-navy-dark: #0C4A6E;
+  
+  --radius-healing: 24px;
+  
+  --shadow-soft-ui: 0 10px 30px -5px rgba(14, 165, 233, 0.1), 0 4px 10px -2px rgba(14, 165, 233, 0.05);
+  --shadow-pastel-blue: 0 10px 20px -5px rgba(14, 165, 233, 0.2);
+  --shadow-pastel-peach: 0 10px 20px -5px rgba(249, 115, 22, 0.2);
+  --shadow-pastel-mint: 0 10px 20px -5px rgba(16, 185, 129, 0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-lavender-bg text-navy-dark font-sans antialiased overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.pastel-card {
+  @apply bg-white shadow-soft-ui transition-all duration-300;
+  border-radius: var(--radius-healing);
+}
+
+.stadium-button {
+  @apply px-8 py-4 rounded-full font-bold transition-all duration-300 text-center flex items-center justify-center;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.orb-glow {
+  background: radial-gradient(circle at center, #7DD3FC, #BAE6FD);
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+.mesh-gradient {
+  background-color: #F0F9FF;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(200,100%,95%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(200,100%,90%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(190,100%,90%,1) 0, transparent 50%), 
+    radial-gradient(at 0% 50%, hsla(190,100%,90%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 50%, hsla(200,100%,95%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 50%, hsla(200,100%,90%,1) 0, transparent 50%);
+}
